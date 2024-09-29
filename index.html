@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Battle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Pokémon Battle Game</h1>
+        <div id="rules">
+            <h2>Game Rules</h2>
+            <p>1. Each player selects a Pokémon.</p>
+            <p>2. Players take turns choosing an action.</p>
+            <p>3. Actions:</p>
+            <ul>
+                <li><strong>Fight:</strong> Deal damage to the opponent.</li>
+                <li><strong>Bag:</strong> Use an item (currently not implemented).</li>
+                <li><strong>Run:</strong> Attempt to escape the battle (not implemented).</li>
+                <li><strong>Jump:</strong> Avoid the next attack (not implemented).</li>
+            </ul>
+            <p>4. Each Pokémon starts with 100 health points (HP).</p>
+            <p>5. The game lasts for 3 rounds, and the player with the most remaining health at the end wins.</p>
+            <p>6. Moves are tracked for each player and displayed on their side.</p>
+            <button id="start-game">Start Battle</button>
+        </div>
+        <div id="player-selection" style="display: none;">
+            <h2>Select Your Pokémon</h2>
+            <div id="pokemon-list"></div>
+        </div>
+        <div id="battle-area" style="display: none;">
+            <div id="battle-info"></div>
+            <div id="health-status"></div>
+            <div class="player-area" id="player1-area">
+                <h3 id="player1-name"></h3>
+                <div id="player1-moves"></div>
+            </div>
+            <div class="player-area" id="player2-area">
+                <h3 id="player2-name"></h3>
+                <div id="player2-moves"></div>
+            </div>
+            <div id="action-buttons"></div>
+            <button id="next-turn" style="display: none;">Next Turn</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
